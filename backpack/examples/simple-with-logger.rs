@@ -1,9 +1,16 @@
-use log_rs::logging::{LogFormat, ModernLogger, ModernBackend, Printer, Verbosity, L, log, log::*, set_logger};
+use log_rs::logging::{
+    L, LogFormat, ModernBackend, ModernLogger, Printer, Verbosity, log, log::*, set_logger,
+};
 use policy_rs::policy::{Policy, ReasonCode, Request, Rule, Target};
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     // Initialize logger with verbosity
-    let logger = Printer::new(ModernLogger, ModernBackend, LogFormat::Text, Verbosity::Normal);
+    let logger = Printer::new(
+        ModernLogger,
+        ModernBackend,
+        LogFormat::Text,
+        Verbosity::Normal,
+    );
     set_logger(logger);
 
     L.intro("Evaluating policy");
