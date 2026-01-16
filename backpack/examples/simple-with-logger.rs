@@ -1,4 +1,4 @@
-use log_rs::logging::{LogFormat, SimpleLogger, Printer, Verbosity, log, set_logger};
+use log_rs::logging::{LogFormat, Printer, SimpleLogger, Verbosity, log, set_logger};
 use policy_rs::policy::{Policy, ReasonCode, Request, Rule, Target};
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
