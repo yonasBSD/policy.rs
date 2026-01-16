@@ -1,0 +1,10 @@
+[package]
+name = "policy-rs"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+gate0 = { git = "https://github.com/Qarait/gate0", version = "0.1.0" }
+
+[dev-dependencies]
+log-rs = { git = "https://github.com/yonasBSD/log.rs" }
